@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ff69b4, #ffb6c1);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            animation: fadeIn 3s;
+        }
+        iframe {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #yes {
+            background: #4CAF50;
+            color: white;
+        }
+        #yes:hover {
+            background: #45a049;
+        }
+        #no {
+            background: #f44336;
+            color: white;
+        }
+        #no:hover {
+            background: #da190b;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            display: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <p>Hey Ritika, you've made my heart skip a beat every day. Will you be my Valentine and make this year even more special?</p>
+    
+    <!-- Embedded YouTube video for "Perfect" by Ed Sheeran -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <button id="yes">Yes! 💖</button>
+    <button id="no">No 😢</button>
+    <div id="response"></div>
+
+    <script>
+        const yesBtn = document.getElementById('yes');
+        const noBtn = document.getElementById('no');
+        const response = document.getElementById('response');
+
+        yesBtn.addEventListener('click', () => {
+            response.style.display = 'block';
+            response.innerHTML = 'Yay! I love you! 💕';
+            response.style.color = '#4CAF50';
+        });
+
+        noBtn.addEventListener('click', () => {
+            response.style.display = 'block';
+            response.innerHTML = 'Aww, maybe next time? 😊';
+            response.style.color = '#f44336';
+        });
+    </script>
+</body>
+</html>
